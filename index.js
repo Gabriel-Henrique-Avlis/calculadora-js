@@ -118,8 +118,7 @@ document.getElementById("calcular").addEventListener("click", function(){
             resultado.value = resultDiv;
         }
         else if (resultado.value === '0'){
-            resultDiv = 'Impossivel dividir por zero';
-            resultado.value = resultDiv;
+            resultado.value = 'Impossivel dividir por zero';
         }
         numDiv1 = "";
         numDiv2 = "";
