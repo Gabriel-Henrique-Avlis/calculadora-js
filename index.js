@@ -112,14 +112,15 @@ document.getElementById("calcular").addEventListener("click", function(){
     else if(operador == "/"){
         if(resultado.value != '0'){
             numDiv2 = Number(resultado.value);
+            resultado.value = "";
+            console.log(numDiv2);
+            resultDiv = numDiv1 / numDiv2;
+            resultado.value = resultDiv;
         }
-        else{
-            resultado.value = 'defddds';
+        else if (resultado.value === '0'){
+            resultDiv = 'Impossivel dividir por zero';
+            resultado.value = resultDiv;
         }
-        resultado.value = "";
-        console.log(numDiv2);
-        resultDiv = numDiv1 / numDiv2;
-        resultado.value = resultDiv;
         numDiv1 = "";
         numDiv2 = "";
         document.getElementById("limpar").style.backgroundColor = "red";
